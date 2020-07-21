@@ -6,6 +6,7 @@ start:
 		--env AWS_PROFILE="kh-labs" \
 		--env AWS_ACCESS_KEY_ID="$$(sed -n 2p creds/credentials | sed 's/.*=//')" \
 		--env AWS_SECRET_ACCESS_KEY="$$(sed -n 3p creds/credentials | sed 's/.*=//')" \
+		--env OWNER=$$OWNER \
 		-v /var/run/docker.sock:/var/run/docker.sock \
 		-v $$(pwd):/work \
 		-w /work \
