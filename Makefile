@@ -10,14 +10,14 @@ start:
 		-v /var/run/docker.sock:/var/run/docker.sock \
 		-v $$(pwd):/work \
 		-w /work \
-		--name pawst \
+		--name pawst_ps \
 		bryandollery/terraform-packer-aws-alpine
 
 stop:
-	docker rm -f pawst 2> /dev/null || true
+	docker rm -f pawst_ps 2> /dev/null || true
 
 exec:
-	docker exec -it pawst bash || true
+	docker exec -it pawst_ps bash || true
 
 build:
 	packer build packer.json
