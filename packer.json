@@ -42,7 +42,13 @@
   {
     "type": "file",
     "source": "/home/ubuntu/token",
-    "destination": "/token/token",
+    "destination": "/output/token",
+    "direction": "download"        
+  },
+  {
+    "type": "file",
+    "source": "/etc/rancher/k3s/k3s.yaml",
+    "destination": "/output/k3s.yaml",
     "direction": "download"        
   }]
 }

@@ -8,7 +8,7 @@ start:
 		--env AWS_SECRET_ACCESS_KEY="$$(sed -n 3p creds/credentials | sed 's/.*=//')" \
 		--env OWNER=$$OWNER \
 		-v /var/run/docker.sock:/var/run/docker.sock \
-		-v k3s_token:/token \
+		-v k3s_packer:/output \
 		-v $$PWD:/$$(basename $$PWD) \
 		-w /$$(basename $$PWD) \
 		--name $$(basename $$PWD) \
