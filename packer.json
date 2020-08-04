@@ -38,5 +38,11 @@
   {
     "type": "shell",
     "inline": ["/home/ubuntu/provision.sh"]
+  },
+  {
+    "type": "file",
+    "source": "/home/ubuntu/token",
+    "destination": "/token/token",
+    "direction": "download"        
   }]
 }
